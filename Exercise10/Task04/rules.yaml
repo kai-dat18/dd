@@ -1,0 +1,11 @@
+rules:
+-
+    expr: age < 18 & martial_status == single
+-
+    expr: income > 1000 & age > 17
+-
+    expr: income > 1000 & employment_status == employed
+-
+    expr: martial_status == married & income > 2500
+-
+    expr: n_children > 3 & income > 2500

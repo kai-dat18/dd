@@ -1,0 +1,17 @@
+docker run -it rocker/r-ver:3.5.2
+
+library(jsonlite)
+install.packages('jsonlite')
+
+docker container prune
+
+
+docker run -it -v rlibpath:/rlibpath/ rocker/r-ver:3.5.2
+
+.libPaths('/rlibpath/')
+# Kontrolle
+.libPaths()
+install.packages('jsonlite')
+
+# neu starten
+library(jsonlite)

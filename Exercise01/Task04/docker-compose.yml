@@ -1,0 +1,16 @@
+version: '3'
+services:
+    
+  rstudio:
+    image: rocker/rstudio
+    environment:
+      USER: secret_user
+      PASSWORD: secret_password
+    ports:
+        - 8787:8787
+    volumes:
+        - rlibpath:/rlibpath/
+        - C:/secret_user/:/home/secret_user/
+
+volumes:
+    rlibpath:
